@@ -1,3 +1,206 @@
 body{
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.header--bg{
+    background-color: black;
+    
+}
+
+.header--container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    /*  */
+    padding: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header--menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header--menu a{
+    padding: 1rem 2rem;
+    display: inline-block;
+    color: white;
+    font-size:1.12rem;
+    border-radius: 4px;
+    
+    text-align: center;
+    position: relative;
+    
+}
+
+.header--menu a::after{
+content: "";
+display: block;
+height: 2px;
+width: 0px;
+background-color: white;
+margin-top: 8px;
+transition: 0.3s;
+position: absolute;
+}
+
+.header--menu a:hover::after{
+    width: 100%;
+}
+
+@media(max-width: 700px) {
+   .header--container{
+    justify-content: center;
+       flex-direction: column;
+   }
+   
+   .header--menu{
+    gap: 30px;
+   }
+    .header--menu a{
+        background-color: #111;
+        font-size: 1rem;
+    }
+
+    .header--menu a::after{
+        display: none;
+    }
+
+
+    .header--menu a:hover{
+        background-color: #2e2e2e;
+    }
+}
+
+
+@media(max-width:500px){
+
+    
+    .header--menu a{
+        padding: 0.6rem 0.8rem;
+        font-size: 1rem;
+        
+        
+    }
+}
+@media(max-width:380px){
+.header--menu{
+    gap: 5px;
+}
+    
+    .header--menu a{
+        padding: 0.6rem 0.8rem;
+        font-size: 1rem;
+        
+        
+    }
+}
+@media(max-width:340px){
+    .header--menu{
+        gap: 5px;
+    }
+        
+        .header--menu a{
+            padding: 0.6rem 0.8rem;
+            font-size: 12px;
+            
+            
+        }
+    }
+@media(max-width:300px){
+    .header--container{
+        justify-content: center;
+           flex-direction: column;
+           
+       }
+       .header--menu{
+           gap: 5px;
+           flex-direction: row;
+       }
+       
+}
+
+/* tamanhos com largura abaixo do galaxy fold */
+@media(max-width:280px){
+    .header--container{
+        justify-content: center;
+           flex-direction: column;
+           
+       }
+   
+       .header--menu a{
+        
+        
+        font-size: 10px;
+        
+       }
+}
+@media(max-width:260px){
+    .header--container{
+        justify-content: center;
+           flex-direction: column;
+           
+       }
+       
+       .header--menu a{
+        padding: 0;
+        background-color: transparent;
+        font-size: 12px;
+        
+       }
+}
+@media(max-width:200px){
+    .header--container{
+        justify-content: center;
+           flex-direction: column;
+           
+       }
+       .header--menu{
+           gap: 4px;
+           flex-direction: row;
+       }
+       .header--menu a{
+        padding: 0;
+        background-color: transparent;
+        font-size: 10px;
+        
+        
+       }
+}
+
+@media(max-width:180px){
+    .header--container{
+        justify-content: center;
+           flex-direction: column;
+           
+       }
+       .header--menu{
+           gap: 4px;
+           flex-direction: row;
+       }
+       .header--menu a{
+        padding: 0;
+        background-color: transparent;
+        font-size: 10px;
+        
+        
+       }
 }
